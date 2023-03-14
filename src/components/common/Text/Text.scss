@@ -1,0 +1,12 @@
+@import '../../../styles/mixins/Font';
+
+.Text {
+    &--description {
+        @include font-description;
+        word-break: break-word;
+    }
+
+    &--listoption {
+        @include font-list-option;
+    }
+}

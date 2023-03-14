@@ -1,0 +1,5 @@
+@import './styles/mixins/Flex';
+
+.App {
+    @include flex();
+}

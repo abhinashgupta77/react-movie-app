@@ -1,0 +1,38 @@
+@import "../../styles/mixins/Flex";
+@import "../../styles/Colors";
+
+.Movie {
+  @include flex($direction: column, $gap: 20px, $shrink: 1);
+  background-color: $very_pale_blue;
+  min-height: 100vh;
+
+  &__loading {
+    @include flex($justify: center, $align: center, $shrink: 1);
+    height: 500px;
+  }
+
+  &__content {
+    @include flex($gap: 20px, $shrink: 1);
+    padding: 20px;
+
+    &-banner {
+      width: 30%;
+      height: 400px;
+    }
+
+    &-details {
+      @include flex($direction: column, $gap: 20px, $shrink: 1);
+      box-shadow: $mm_box_shadow;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    &__content {
+      flex-direction: column;
+
+      &-banner {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

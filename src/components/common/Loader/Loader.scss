@@ -1,0 +1,21 @@
+@import '../../../styles/Colors';
+@import '../../../styles/mixins/Flex';
+
+.Loader {
+    @include flex($justify: center, $align: center);
+
+    &--small {
+        width: 48px;
+        height: 48px
+    }
+
+    &--medium {
+        width: 96px;
+        height: 96px;
+    }
+
+    &--large {
+        width: 144px;
+        height: 144px;
+    }
+}

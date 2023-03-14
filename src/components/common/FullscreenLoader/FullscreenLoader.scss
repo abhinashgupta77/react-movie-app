@@ -1,0 +1,20 @@
+@import '../../../styles/Colors';
+@import '../../../styles/mixins/Flex';
+@import '../../../styles/mixins/Common';
+
+.FullscreenLoader {
+    @include position(fixed, $top: 0, $left: 0, $bottom: 0, $right: 0);
+    z-index: 1000;
+    background-color: rgba(169, 175, 193, 0.7);
+    overflow-y: auto;
+
+    &__dialog{
+        @include flex($align: center, $justify: center);
+        min-height: calc(100% - 60px);
+        margin: 30px;
+    }
+
+    &__content{
+        z-index: 1001;
+    }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/mixins/Flex";
+@import "../../styles/Colors";
+
+.Movies {
+  @include flex($direction: column, $gap: 20px, $shrink: 1);
+  padding: 10px 20px 20px;
+  background-color: $pale_blue;
+
+  &__header {
+    @include flex($align: center, $justify: space-between);
+  }
+
+  &__cards {
+    display: grid;
+    grid-gap: 20px;
+    height: calc(100vh - 160px);
+    overflow: hidden auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(4, minmax(min-content, max-content));
+
+    @media screen and (min-width: 2300px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    }
+  }
+
+  &--empty {
+    @include flex($justify: center, $align: center, $shrink: 1);
+  }
+}

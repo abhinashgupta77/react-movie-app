@@ -1,0 +1,30 @@
+@import '../../../styles/Colors';
+@import '../../../styles/mixins/Common';
+@import '../../../styles/mixins/Flex';
+@import '../../../styles/mixins/Font';
+
+.TextInput {
+    @include flex($align: center, $gap: 10px);
+    @include border;
+    box-shadow: $sm_form_input_shadow;
+    background-color: $white;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &.error {
+        border-color: $very_light_red;
+    }
+
+    &--disabled {
+        opacity: 0.6;
+        cursor: not-allowed !important;
+    }
+    
+    &__field {
+        @include font($size: 16px, $color: $very_dark_gray, $type: medium);
+        width: 100%;
+        padding: 18px 20px;
+        outline: none;
+        border: none;
+    }
+}

@@ -1,0 +1,5 @@
+src/registerServiceWorker.js
+tests/
+*.test.js*
+src/reportWebVitals.js
+node_modules

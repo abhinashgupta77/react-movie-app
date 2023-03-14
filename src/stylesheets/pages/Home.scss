@@ -1,0 +1,9 @@
+@import '../../styles/mixins/Flex';
+@import '../../styles/Colors';
+
+.Home {
+    @include flex($direction: column, $gap: 10px, $shrink: 1);
+    background-color: $pale_blue;
+    height: 100vh;
+    overflow: hidden;   
+}

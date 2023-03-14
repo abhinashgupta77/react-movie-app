@@ -1,0 +1,16 @@
+@import "../../../styles/mixins/Flex";
+
+.Pagination {
+    @include flex($align: center, $justify: flex-end, $gap: 15px);
+    min-height: 32px;
+
+    &__nav {
+        @include flex($align: center, $justify: flex-end, $gap: 10px);
+        height: 32px;
+        min-width: 0;
+    }
+
+    .Icon {
+        cursor: inherit;
+    }
+}

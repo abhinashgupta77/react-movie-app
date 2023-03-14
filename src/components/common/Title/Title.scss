@@ -1,0 +1,31 @@
+@import '../../../styles/mixins/Font';
+
+.Title {
+    &--transform{
+        text-transform: capitalize;
+    }
+
+    &--page {
+        @include font-heading;
+    }
+
+    &--subtitle {
+        @include font-subheading;
+    }
+
+    &--card {
+        @include font-card-heading;
+    }
+
+    &--section {
+        @include font-section-heading;
+    }
+
+    &--label {
+        @include font-label;
+    }
+
+    &--list {
+        @include font-list;
+    }
+}

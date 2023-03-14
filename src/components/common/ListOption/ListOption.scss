@@ -1,0 +1,29 @@
+@import '../../../styles/Colors';
+@import '../../../styles/mixins/Flex';
+@import '../../../styles/mixins/Font';
+@import '../../../styles/mixins/Common';
+
+.ListOption {
+    @include flex($align: center, $gap: 10px);
+    border-radius: 4px;
+    min-height: 32px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &:not(.ListOption--disabled):hover {
+        background-color: $option_hover;
+    }
+
+    &__content-padding {
+
+        &:only-child {
+            padding: 0 10px;
+        }
+    }
+
+    &--disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
